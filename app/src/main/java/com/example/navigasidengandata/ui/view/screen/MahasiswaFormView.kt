@@ -51,5 +51,35 @@ fun MahasiswaFormView(
                 contentDescription = null,
                 modifier = Modifier.size(45.dp)
             )
+            Spacer(modifier = Modifier.width(16.dp))
+            Column {
+                Text(
+                    text = "Universitas Muhammadiyah Yogyakarta",
+                    color = Color.Red,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "Unggul dan Islami",
+                    color = Color.Red,
+                    fontWeight = FontWeight.Light
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Box(
+            modifier = Modifier
+                .background(
+                    color = Color.White,
+                    shape = RoundedCornerShape(topStart = 15.dp, topEnd = 15.dp)
+                )
+                .fillMaxSize()
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
 
 
