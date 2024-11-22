@@ -63,3 +63,14 @@ fun Mahasiswa(
                 onBackButtonClicked = { navController.popBackStack()}
             )
         }
+        composable(route = Halaman.Tampil.name){
+            DetailMahasiswaView(
+                dataMhs = mahasiswaUiState,
+                DataKRS = krsUiState,
+                onClickButton = {
+                    navController.popBackStack()
+                }
+            )
+        }
+    }
+}
