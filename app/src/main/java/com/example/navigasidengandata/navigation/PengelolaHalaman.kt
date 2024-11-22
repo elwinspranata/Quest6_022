@@ -31,3 +31,11 @@ fun Mahasiswa(
     navController: NavHostController = rememberNavController()
 )
 {
+    val mahasiswaUiState = mahasiswaViewModel.mhsStateUi.collectAsState().value
+    val krsUiState = krsViewModel.krsStateUi.collectAsState().value
+
+    NavHost(
+        navController = navController,
+        startDestination = Halaman.Splash.name,
+        modifier = modifier.padding()
+    ){
