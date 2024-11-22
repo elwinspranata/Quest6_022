@@ -38,4 +38,18 @@ fun MahasiswaFormView(
     val listData = mutableListOf(nim, nama, email)
     val context = LocalContext.current
 
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(color = colorResource(id = R.color.primary)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Spacer(modifier = Modifier.height(16.dp))
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Image(
+                painter = painterResource(id = com.example.navigasidengandata.R.drawable.umy),
+                contentDescription = null,
+                modifier = Modifier.size(45.dp)
+            )
+
 
