@@ -39,3 +39,20 @@ fun Mahasiswa(
         startDestination = Halaman.Splash.name,
         modifier = modifier.padding()
     ){
+        composable(route = Halaman.Splash.name){
+            SplashView {
+                navController.navigate(Halaman.Mahasiswa.name)
+            }
+        }
+        composable(route = Halaman.Mahasiswa.name)
+        {
+            MahasiswaFormView(modifier = Modifier,
+                onSubmitButtonClicked = {
+                    mahasiswaViewModel.saveDataMhs(it)
+                    navController.navigate(Halaman.Matakuliah.name)
+                },
+                onBackButtonClicked = {
+                    navController.popBackStack()
+                }
+            )
+        }
