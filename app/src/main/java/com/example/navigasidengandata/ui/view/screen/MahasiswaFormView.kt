@@ -32,5 +32,10 @@ fun MahasiswaFormView(
     onSubmitButtonClicked: (MutableList<String>) -> Unit,
     onBackButtonClicked: () -> Unit
 ) {
+    var nama by remember { mutableStateOf("") }
+    var nim by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    val listData = mutableListOf(nim, nama, email)
+    val context = LocalContext.current
 
 
