@@ -1,6 +1,6 @@
 package com.example.navigasidengandata.data
 
-object MataKuliah {
+object MataKuliah{
     val options = listOf(
         "Pemrograman Aplikasi Mobile Lanjut",
         "Pengembangan Aplikasi Web Framework",
