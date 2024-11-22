@@ -149,5 +149,25 @@ fun MahasiswaFormView(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Button(onClick = { onBackButtonClicked() }) {
+                        Text(text = "Kembali")
+                    }
+                    Button(onClick = {
+                        if (nim.isEmpty() || nama.isEmpty() || email.isEmpty()) {
+                            Toast.makeText(context, "Semua data harus diisi", Toast.LENGTH_SHORT).show()
+                        } else {
+                            onSubmitButtonClicked(listData)
+                        }
+                    }) {
+                        Text(text = "Simpan")
+                    }
+                }
+            }
+        }
+    }
+}
 
 
