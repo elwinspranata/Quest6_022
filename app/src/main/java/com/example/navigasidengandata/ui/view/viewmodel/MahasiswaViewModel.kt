@@ -23,17 +23,3 @@ class MahasiswaViewModel : ViewModel() {
         }
     }
 
-    fun setEmail(inputEmail: String){
-        _mhsState.update {
-                stateEmail -> stateEmail.copy(email = inputEmail)
-        }
-    }
-
-    fun saveDataMhs(ls: MutableList<String>){
-        _mhsState.update { status -> status.copy(
-            nim = ls[0],
-            nama = ls[1],
-            email = ls[2]
-        )}
-    }
-}
