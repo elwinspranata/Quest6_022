@@ -23,3 +23,8 @@ class MahasiswaViewModel : ViewModel() {
         }
     }
 
+    fun setEmail(inputEmail: String){
+        _mhsState.update {
+                stateEmail -> stateEmail.copy(email = inputEmail)
+        }
+    }
